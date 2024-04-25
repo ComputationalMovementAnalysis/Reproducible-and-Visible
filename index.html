@@ -11,8 +11,8 @@
   <meta name="generator" content="quarto-1.5.30">
 
   <meta name="author" content="Nils Ratnaweera">
-  <meta name="dcterms.date" content="2025-10-04">
-  <title>Collaboration, Sharing &amp; Version Control</title>
+  <meta name="dcterms.date" content="2024-03-05">
+  <title>Reproducible and Publicly Visible Data Analysis</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -393,7 +393,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Collaboration, Sharing &amp; Version Control</h1>
+  <h1 class="title">Reproducible and Publicly Visible Data Analysis</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -403,16 +403,17 @@ Nils Ratnaweera
 </div>
 </div>
 
-  <p class="date">2025-10-04</p>
+  <p class="date">2024-03-05</p>
 </section><section id="TOC">
 <nav role="doc-toc"> 
 <h2 id="toc-title">Table of contents</h2>
 <ul>
-<li><a href="#/literate-programming" id="/toc-literate-programming"><span class="header-section-number">1</span> Literate Programming</a></li>
-<li><a href="#/markup-and-markdown" id="/toc-markup-and-markdown"><span class="header-section-number">2</span> Markup and Markdown</a></li>
-<li><a href="#/quarto" id="/toc-quarto"><span class="header-section-number">3</span> Quarto</a></li>
-<li><a href="#/publishing-html-websites" id="/toc-publishing-html-websites"><span class="header-section-number">4</span> Publishing HTML / Websites</a></li>
-<li><a href="#/sec-git-github" id="/toc-sec-git-github"><span class="header-section-number">5</span> Versioncontrol with Git and GitHub</a></li>
+<li><a href="#/reproducibility-in-data-science" id="/toc-reproducibility-in-data-science"><span class="header-section-number">1</span> <span class="hlo">Reproducibility</span> in Data Science</a></li>
+<li><a href="#/literate-programming-with-quarto" id="/toc-literate-programming-with-quarto"><span class="header-section-number">2</span> Literate Programming with <span class="hlo">Quarto</span></a></li>
+<li><a href="#/markdown" id="/toc-markdown"><span class="header-section-number">3</span> Markdown</a></li>
+<li><a href="#/quarto" id="/toc-quarto"><span class="header-section-number">4</span> Quarto</a></li>
+<li><a href="#/publishing-html-websites" id="/toc-publishing-html-websites"><span class="header-section-number">5</span> Publishing HTML / Websites</a></li>
+<li><a href="#/sec-git-github" id="/toc-sec-git-github"><span class="header-section-number">6</span> Versioncontrol with Git and GitHub</a></li>
 </ul>
 </nav>
 </section>
@@ -423,31 +424,77 @@ Nils Ratnaweera
 </section>
 <section id="goals" class="slide level2 center">
 <h2>Goals</h2>
-<div>
-<ul>
-<li class="fragment">Know the advantages of *simple text documents<br>
-</li>
-<li class="fragment">Know the basics of Markdown</li>
-<li class="fragment">Know the basics of Quarto</li>
-<li class="fragment">Quarto Advanced Features</li>
-<li class="fragment">Quarto Professional Features</li>
-<li class="fragment">(Collaboration with Git and GitHub)</li>
-</ul>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>TODO</strong></p>
+</div>
+<div class="callout-content">
+<p>Write out these goals</p>
+</div>
+</div>
 </div>
 </section></section>
 <section>
-<section id="literate-programming" class="title-slide slide level1 center" data-number="1">
-<h1><span class="header-section-number">1</span> Literate Programming</h1>
+<section id="reproducibility-in-data-science" class="title-slide slide level1 center" data-number="1">
+<h1><span class="header-section-number">1</span> <span class="hlo">Reproducibility</span> in Data Science</h1>
 
 </section>
-<section id="section" class="slide level2 center" data-background-image="images/pexels-anete-lusina-7256682.jpg">
+<section id="section" class="slide level2 center" data-background-image="images/garret.jpg">
 <h2></h2>
-<div class="blockquote font200">
+</section>
+<section id="section-1" class="slide level2 center" data-background-image="images/reproducibility_crisis-2.png" data-background-size="contain">
+<h2></h2>
+</section>
+<section class="slide level2 center">
+
+<div class="r-fit-text uppercase">
+<p>Lack of <span class="hlo">reproducibility</span></p>
+</div>
+<div class="r-fit-text uppercase">
+<p>is a problem</p>
+</div>
+</section>
+<section class="slide level2 center">
+
+<div class="r-fit-text uppercase">
+<p><span class="hlo">Quarto</span>, <span class="hlo">Git</span> &amp; <span class="hlo">GitHub</span> are</p>
+</div>
+<div class="r-fit-text uppercase">
+<p>(part of) the solution</p>
+</div>
+</section></section>
+<section>
+<section id="literate-programming-with-quarto" class="title-slide slide level1 center" data-number="2">
+<h1><span class="header-section-number">2</span> Literate Programming with <span class="hlo">Quarto</span></h1>
+
+</section>
+<section id="section-2" class="slide level2 center" data-background-image="images/pexels-anete-lusina-7256682.jpg">
+<h2></h2>
+<div class="blockquote font200 outline">
 <p>When was the last time you spent a pleasant evening in a comfortable chair, reading a good R Script?</p>
 </div>
-<div class="blockquote attribution">
+<div class="blockquote attribution outline">
 <p>– Adapted from John Bentley (1986) “Communications of the ACM”</p>
 </div>
+<aside class="notes">
+<ul>
+<li>Why would you even do that? A lot of good R-Scripts are written, only a portion of them are only ever read</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="donald-knuth-1984" class="slide level2 center">
 <h2>Donald Knuth 1984</h2>
@@ -476,7 +523,6 @@ Nils Ratnaweera
 <div class="fragment frade-in fade-out">
 <blockquote>
 <p>I’ve stumbled across a method of composing programs that excites me very much.</p>
-<p>In fact, my enthusiasm is so great that I must warn the reader to discount much of what I shall say as the ravings of a fanatic who thinks he has just seen a great light.</p>
 </blockquote>
 </div>
 <div class="fragment frade-in-then-out">
@@ -505,21 +551,18 @@ Nils Ratnaweera
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-1" class="slide level2 center" data-background-video="video/knuth.mp4" data-background-size="contain">
+<section id="section-3" class="slide level2 center" data-background-video="video/knuth.mp4" data-background-size="contain">
 <h2></h2>
 </section>
-<section id="exercise" class="slide level2 center">
-<h2>Exercise 🛠️</h2>
+<section id="exercise-literate-programing" class="slide level2 center">
+<h2>Exercise: Literate Programing 🛠️</h2>
 <p><em>Make your R-Script literate</em></p>
 <ol type="1">
-<li><p>Download the File <code>GOT.zip</code> from moodle (<em>Game of Thrones Dataset</em>)</p></li>
-<li><p>Unzip the File in a reasonable location</p></li>
-<li><p>Open the .RProj File with RStudio</p></li>
-<li><p>Run the RScript got-1.R and try to undestand what is happening</p></li>
-<li><p>Make the R-Script literate by</p>
-<blockquote>
-<p>explaining to human beings what we want a computer to do</p>
-</blockquote></li>
+<li>Download the File <code>GOT.zip</code> from moodle (<em>Game of Thrones Dataset</em>)</li>
+<li>Unzip the File in a reasonable location</li>
+<li>Open the .RProj File with RStudio</li>
+<li>Run the RScript got-1.R and try to undestand what is happening</li>
+<li>Make the R-Script literate by <em>explaining to human beings what we want a computer to do</em></li>
 </ol>
 <aside class="notes">
 <p>Do this as well via sharing the screen</p>
@@ -536,13 +579,17 @@ Nils Ratnaweera
       }</style></aside>
 </section></section>
 <section>
-<section id="markup-and-markdown" class="title-slide slide level1 center" data-number="2">
-<h1><span class="header-section-number">2</span> Markup and Markdown</h1>
+<section id="markdown" class="title-slide slide level1 center" data-number="3">
+<h1><span class="header-section-number">3</span> Markdown</h1>
+
+</section>
+<section id="why-markdown" class="slide level2 center">
+<h2><span class="hlo">Why</span> Markdown?</h2>
 <aside class="notes">
 <ul>
 <li>Using RComments to explain your code is great, but very limiting</li>
 <li>We cannot properly structure our comments: Highlight words, work with images, hyperlinks etc</li>
-<li>This is where Markup and markdown comes into play</li>
+<li>This is where markdown comes into play</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -555,59 +602,11 @@ Nils Ratnaweera
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
-<section id="what-is-a-markup-language" class="slide level2 center">
-<h2>What is a markup language?</h2>
-<ul>
-<li>Language for structuring texts</li>
-<li>Machine readable (use of tags / symbols)</li>
-<li>Clear separation of content and formatting</li>
-<li><em>What you see is what you mean</em> (WYSIWYM)</li>
-</ul>
-<aside class="notes">
-<p>Focus on what we want to write, not what it looks like.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="some-existing-markup-languages" class="slide level2 center">
-<h2>Some existing markup languages</h2>
-<p>Making a text <strong>bold</strong> in HTML, LaTex and Markdown:</p>
-<table>
-<thead>
-<tr class="header">
-<th>Langauge</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>HTML</td>
-<td><code>&lt;b&gt;Hello World&lt;/b&gt;</code></td>
-</tr>
-<tr class="even">
-<td>LaTeX</td>
-<td><code>\textbf{Hello World}</code></td>
-</tr>
-<tr class="odd">
-<td>Markdown</td>
-<td><code>**Hello World**</code></td>
-</tr>
-</tbody>
-</table>
 </section>
 <section id="what-is-markdown" class="slide level2 center">
 <h2>What is Markdown?</h2>
 <ul>
-<li>Lightweight markup language for easy text formatting</li>
+<li>A Lightweight markup language</li>
 <li>Easy to learn</li>
 <li>Machine readable <em>and</em> human readable</li>
 </ul>
@@ -616,16 +615,18 @@ Nils Ratnaweera
 <h2>Markdown Syntax</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href=""></a><span class="fu"># A story of a fox</span></span>
 <span id="cb1-2"><a href=""></a></span>
-<span id="cb1-3"><a href=""></a>The *quick* brown fox **jumps** over the lazy <span class="co">[</span><span class="ot">dog</span><span class="co">](https://en.wikipedia.org/wiki/Dog)</span>.</span>
+<span id="cb1-3"><a href=""></a>The *quick* brown fox **jumps** over the lazy dog.</span>
 <span id="cb1-4"><a href=""></a></span>
 <span id="cb1-5"><a href=""></a><span class="al">![](images/fox-over-dog.jpg)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <div style="height: 100px">
 
 </div>
+<div id="story-of-a-fox">
 <h3 id="a-story-of-a-fox">A story of a fox</h3>
-<p>The <em>quick</em> brown fox <strong>jumps</strong> over the lazy <a href="https://en.wikipedia.org/wiki/Dog">dog</a>.</p>
-<p><img data-src="images/fox-over-dog.jpg" width="400"></p>
+<p>The <em>quick</em> brown fox <strong>jumps</strong> over the lazy dog.</p>
+<p><img data-src="images/fox-over-dog.jpg" width="240"></p>
+</div>
 <aside class="notes">
 <ul>
 <li><a href="https://quarto.org/docs/authoring/markdown-basics.html">Markdown Basics</a></li>
@@ -644,38 +645,67 @@ Nils Ratnaweera
           display:block!important;
       }</style></aside>
 </div>
+</section>
+<section id="markdown-exercise" class="slide level2 center">
+<h2>Markdown exercise 🛠️</h2>
+<div>
+<ol type="1">
+<li class="fragment">Grab your smartphone (if you have one)</li>
+<li class="fragment">Open your favorite messenger: Threema, Telegram or WhatsApp (not Signal)</li>
+<li class="fragment">Send the following text message to your favorite geek:</li>
+</ol>
+</div>
+<div class="fragment">
+<p>Threema / WhatsApp:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="" aria-hidden="true" tabindex="-1"></a>Did you know, that Threema and WhatsApp support markdown?</span>
+<span id="cb2-2"><a href="" aria-hidden="true" tabindex="-1"></a>*Bold*, _italic_ and ~strikethrough~!</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>Telegram:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="" aria-hidden="true" tabindex="-1"></a>Did you know, that Telegram supports markdown?</span>
+<span id="cb3-2"><a href="" aria-hidden="true" tabindex="-1"></a>**Bold**, *italic* and ~~strikethrough~~.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="if-that-was-markdown-whats-markup" class="slide level2 center">
+<h2>If that was Mark<span class="hlo">down</span>, what’s Mark<span class="hlo">up</span>?</h2>
+<ul>
+<li>Markup is a generic term for a language which structures text</li>
+<li>Machine readable (use of tags / symbols)</li>
+<li>Markdown is <em>a</em> markup language</li>
+<li>Other markup languages include: HTML and LaTeX</li>
+<li>Making text bold:
+<ul>
+<li>Markdown: <code>**Hello World**</code><br>
+</li>
+<li>HTML: <code>&lt;b&gt;Hello World&lt;/b&gt;</code><br>
+</li>
+<li>LaTeX: <code>\textbf{Hello World}</code></li>
+</ul></li>
+</ul>
 </section></section>
 <section>
-<section id="quarto" class="title-slide slide level1 center" data-number="3">
-<h1><span class="header-section-number">3</span> Quarto</h1>
+<section id="quarto" class="title-slide slide level1 center" data-number="4">
+<h1><span class="header-section-number">4</span> Quarto</h1>
 
 </section>
 <section id="what-is-quarto" class="slide level2 center">
 <h2>What is Quarto?</h2>
 <div>
 <ul>
-<li class="fragment">An open source <em>cli</em> tool</li>
-<li class="fragment">Based on Markdown <img data-src="images/rstudio-qmd-how-it-works2.png"></li>
-<li class="fragment">Extends the standard Markdown language with useful elements (e.g.&nbsp;callout blocks)</li>
-<li class="fragment">Integrates the integration of code (R, Python, Julia, SQL…)</li>
+<li class="fragment">Combines Markdown with R to generate Documents</li>
+<li class="fragment">Also works with Python, Julia…</li>
+<li class="fragment">Can create PDFs, Websites, Books or Slides of your data analysis</li>
+<li class="fragment">Is OpenSource</li>
+<li class="fragment">Is used via the commandline / terminal</li>
+<li class="fragment">Workflow: <img data-src="images/rstudio-qmd-how-it-works2.png"></li>
 </ul>
 </div>
-</section>
-<section id="output-formats" class="slide level2 center">
-<h2>Output formats</h2>
-<ul>
-<li><code>html</code>: Books, Slides, Blogs…</li>
-<li><code>pdf</code>: Books, Slides</li>
-<li><code>epub</code>: Books</li>
-<li><code>word</code>: Books</li>
-<li><code>pptx</code>: Slides</li>
-</ul>
 </section>
 <section id="quarto-exercise-1" class="slide level2 center">
 <h2>Quarto Exercise 1 🛠️</h2>
 <ol type="1">
 <li><p>Check if quarto is installed by running the following command <em>in your terminal</em>:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href=""></a><span class="ex">quarto</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href=""></a><span class="ex">quarto</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>install quarto if necessary (➲ <a href="https://quarto.org">quarto.org</a>)</p></li>
 </ol>
 </section>
@@ -686,7 +716,7 @@ Nils Ratnaweera
 <li><p>Save as <code>got-2.qmd</code></p></li>
 <li><p>Write some prose on the analysis done in <code>got1-R</code></p></li>
 <li><p>Render the file to html by running the following code <em>in your terminal</em></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href=""></a><span class="ex">quarto</span> render got-2.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href=""></a><span class="ex">quarto</span> render got-2.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ol>
 </section>
 <section id="quarto-exercise-3" class="slide level2 center">
@@ -694,10 +724,9 @@ Nils Ratnaweera
 <div>
 <ul>
 <li class="fragment"><p>Iterative development with <code>render</code>: 🫤</p></li>
-<li class="fragment"><p><code>quarto preview</code> enables a live preview (UX: 🥰)</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href=""></a><span class="co"># quarto render markdown.md</span></span>
-<span id="cb4-2"><a href=""></a><span class="ex">quarto</span> preview markdown.md</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li class="fragment"><p>Try it!</p></li>
+<li class="fragment"><p>Iterative development with <code>preview</code>: 🥰</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href=""></a><span class="co"># quarto render markdown.md</span></span>
+<span id="cb6-2"><a href=""></a><span class="ex">quarto</span> preview markdown.md</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul>
 </div>
 </section>
@@ -707,7 +736,7 @@ Nils Ratnaweera
 <ul>
 <li class="fragment">Markdown talks to humans</li>
 <li class="fragment">R Code talks to humans &amp; the computer</li>
-<li class="fragment">Let’s add the R-Code from <code>got-1.R</code> with <kbd>Ctrl</kbd>+<kbd>Alt</kbd><kbd>I</kbd></li>
+<li class="fragment">Let’s add the R-Code from <code>got-1.R</code> with <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>i</kbd></li>
 <li class="fragment">This adds a “fence” where we can add R-Code</li>
 <li class="fragment">Add the R-Code from <code>got-1.R</code> into the code block</li>
 <li class="fragment">Check your updated preview</li>
@@ -721,8 +750,8 @@ Nils Ratnaweera
 <li class="fragment"><p>YAML: <em>YAML Ain’t a Markup Language</em></p></li>
 <li class="fragment"><p>A machine- and human-readable way of storing structured data</p></li>
 <li class="fragment"><p>An example:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href=""></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Analysis of GOT Series</span></span>
-<span id="cb5-2"><a href=""></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Nils Ratnaweera</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href=""></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Analysis of GOT Series</span></span>
+<span id="cb7-2"><a href=""></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Nils Ratnaweera</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li class="fragment"><p>In Quarto: Record metadata (e.g.&nbsp;title, author and date)</p></li>
 <li class="fragment"><p>Is inserted at the beginning of the document and enclosed with <code>---</code></p></li>
 </ul>
@@ -731,37 +760,38 @@ Nils Ratnaweera
 <section id="exercise-yaml-header-1" class="slide level2 center">
 <h2>Exercise YAML Header 1 🛠️</h2>
 <ul>
-<li>Add metadata to your Markdown file using YAML headers</li>
+<li>Add metadata to your markdown file using YAML headers</li>
 </ul>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href=""></a><span class="pp">---</span></span>
-<span id="cb6-2"><a href=""></a><span class="fu">title</span><span class="kw">:</span><span class="at"> A song of ice and fire</span></span>
-<span id="cb6-3"><a href=""></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Nils Ratnaweera </span></span>
-<span id="cb6-4"><a href=""></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href=""></a><span class="pp">---</span></span>
+<span id="cb8-2"><a href=""></a><span class="fu">title</span><span class="kw">:</span><span class="at"> A song of ice and fire</span></span>
+<span id="cb8-3"><a href=""></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Nils Ratnaweera </span></span>
+<span id="cb8-4"><a href=""></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="exercise-yaml-header-2" class="slide level2 center">
 <h2>Exercise YAML Header 2 🛠️</h2>
 <ul>
-<li>Add metadata to your Markdown file using YAML headers</li>
-<li>This renders your file to pdf. You might need to install <code>tinytext</code> (see message in terminal)</li>
+<li>Add metadata to your markdown file using YAML headers</li>
+<li>This renders your file to pdf</li>
+<li>You might need to install <code>tinytext</code> (see message in terminal)</li>
 </ul>
-<div class="sourceCode" id="cb7" data-code-line-numbers="5-9"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href=""></a><span class="pp">---</span></span>
-<span id="cb7-2"><a href=""></a><span class="fu">title</span><span class="kw">:</span><span class="at"> A song of ice and fire</span></span>
-<span id="cb7-3"><a href=""></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Nils Ratnaweera </span></span>
-<span id="cb7-4"><a href=""></a><span class="fu">format</span><span class="kw">:</span><span class="at"> pdf</span></span>
-<span id="cb7-5"><a href=""></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb9-1"><a href=""></a><span class="pp">---</span></span>
+<span id="cb9-2"><a href=""></a><span class="fu">title</span><span class="kw">:</span><span class="at"> A song of ice and fire</span></span>
+<span id="cb9-3"><a href=""></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Nils Ratnaweera </span></span>
+<span id="cb9-4"><a href=""></a><span class="fu">format</span><span class="kw">:</span><span class="at"> pdf</span></span>
+<span id="cb9-5"><a href=""></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="exercise-yaml-header-3" class="slide level2 center">
 <h2>Exercise YAML Header 3 🛠️</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href=""></a><span class="pp">---</span></span>
-<span id="cb8-2"><a href=""></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb8-3"><a href=""></a><span class="at">  </span><span class="fu">pdf</span><span class="kw">:</span><span class="co">            # pdf specific optons:</span></span>
-<span id="cb8-4"><a href=""></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="co">     # - should a Table of Contents be published?</span></span>
-<span id="cb8-5"><a href=""></a><span class="at">    </span><span class="fu">toc-depth</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span><span class="co">  # - How many layers should be displayed in the TOC?</span></span>
-<span id="cb8-6"><a href=""></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href=""></a><span class="pp">---</span></span>
+<span id="cb10-2"><a href=""></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb10-3"><a href=""></a><span class="at">  </span><span class="fu">pdf</span><span class="kw">:</span><span class="co">            # pdf specific optons:</span></span>
+<span id="cb10-4"><a href=""></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="co">     # - should a Table of Contents be published?</span></span>
+<span id="cb10-5"><a href=""></a><span class="at">    </span><span class="fu">toc-depth</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span><span class="co">  # - How many layers should be displayed in the TOC?</span></span>
+<span id="cb10-6"><a href=""></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section></section>
 <section>
-<section id="publishing-html-websites" class="title-slide slide level1 center" data-number="4">
-<h1><span class="header-section-number">4</span> Publishing HTML / Websites</h1>
+<section id="publishing-html-websites" class="title-slide slide level1 center" data-number="5">
+<h1><span class="header-section-number">5</span> Publishing HTML / Websites</h1>
 
 </section>
 <section id="publishing-html-files" class="slide level2 center">
@@ -788,13 +818,51 @@ Nils Ratnaweera
 <li>Click on Publish</li>
 </ul>
 </section>
-<section id="exercise-publish-html-with-quartopub" class="slide level2 center">
-<h2>Exercise Publish HTML with QuartoPub 🛠️</h2>
-<ul>
-<li><p>Create a new account on <a href="https://quartopub.com/">quartopub.com</a></p></li>
-<li><p>Run the following command in your terminal:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href=""></a><span class="ex">quarto</span> publish quarto-pub got-2.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ul>
+</section>
+<section>
+<section id="sec-git-github" class="title-slide slide level1 center" data-number="6">
+<h1><span class="header-section-number">6</span> Versioncontrol with Git and GitHub</h1>
+
+</section>
+<section id="section-4" class="slide level2 center">
+<h2></h2>
+
+<img data-src="images/git-for-designers.jpg" class="r-stretch"></section>
+<section id="git-lets-you-tell-the-story-of-your-project" class="slide level2 center">
+<h2>GIT LETS YOU TELL THE STORY OF YOUR PROJECT</h2>
+</section>
+<section class="slide level2 center">
+
+<div class="font150">
+<p>You use Git to take snapshots of all the files in a folder.</p>
+<p>This folder is called a <span class="hlo">repository</span> or <span class="hlo">repo</span>.</p>
+</div>
+</section>
+<section class="slide level2 center">
+
+<div class="font150">
+<p>When you want to take a snapshot of a file or files, you create a <span class="hlo">commit</span></p>
+</div>
+</section>
+<section class="slide level2 center">
+
+<div class="r-hstack">
+<div>
+<p><img data-src="images-git-github/phd101212s.gif"></p>
+</div>
+<div>
+<div class="class">
+<svg class="graph" style="height: 200px; width: 500px;">
+<g class="grid x-grid svg-hline"> <line x1="10" x2="10" y1="030" y2="060" class="fragment" data-fragment-index="6"></line> <line x1="10" x2="10" y1="060" y2="090" class="fragment" data-fragment-index="7"></line> <line x1="10" x2="10" y1="090" y2="120" class="fragment" data-fragment-index="8"></line> <line x1="10" x2="10" y1="120" y2="150" class="fragment" data-fragment-index="9"></line> <line x1="10" x2="10" y1="150" y2="180" class="fragment" data-fragment-index="10"></line> </g> <g class="svg-circle"> <circle cx="10" cy="030" r="5" class="fragment" data-fragment-index="1"></circle> <circle cx="10" cy="060" r="5" class="fragment" data-fragment-index="6"></circle> <circle cx="10" cy="090" r="5" class="fragment" data-fragment-index="7"></circle> <circle cx="10" cy="120" r="5" class="fragment" data-fragment-index="8"></circle> <circle cx="10" cy="150" r="5" class="fragment" data-fragment-index="9"></circle> <circle cx="10" cy="180" r="5" class="fragment" data-fragment-index="10"></circle> </g> <g class="svg-text"> <text x="20" y="030" class="fragment" data-fragment-index="1">Final.doc</text> <text x="20" y="060" class="fragment" data-fragment-index="6">Final_rev.2.doc</text> <text x="20" y="090" class="fragment" data-fragment-index="7">FINAL_rev.6.COMMENTS.doc</text> <text x="20" y="120" class="fragment" data-fragment-index="8">FINAL_rev.8.comments6.CORRECTIONS.doc</text> <text x="20" y="150" class="fragment" data-fragment-index="9">FINAL_rev.18.comments7.corrections9.MORE.30.doc</text> <text x="20" y="180" class="fragment" data-fragment-index="10">FINAL_rev.22.comments49.corrections.10.#@$%WHYDIDICOMETOGRADSCHOOL????.doc</text> </g>
+</svg>
+</div>
+<div>
+<svg class="graph" style="height: 200px; width: 500px;">
+<g class="grid x-grid svg-hline"> <line x1="10" x2="10" y1="030" y2="060" class="fragment" data-fragment-index="6"></line> <line x1="10" x2="10" y1="060" y2="090" class="fragment" data-fragment-index="7"></line> <line x1="10" x2="10" y1="090" y2="120" class="fragment" data-fragment-index="8"></line> <line x1="10" x2="10" y1="120" y2="150" class="fragment" data-fragment-index="9"></line> <line x1="10" x2="10" y1="150" y2="180" class="fragment" data-fragment-index="10"></line> </g> <g class="svg-circle"> <circle cx="10" cy="030" r="5" class="fragment" data-fragment-index="1"></circle> <circle cx="10" cy="060" r="5" class="fragment" data-fragment-index="6"></circle> <circle cx="10" cy="090" r="5" class="fragment" data-fragment-index="7"></circle> <circle cx="10" cy="120" r="5" class="fragment" data-fragment-index="8"></circle> <circle cx="10" cy="150" r="5" class="fragment" data-fragment-index="9"></circle> <circle cx="10" cy="180" r="5" class="fragment" data-fragment-index="10"></circle> </g> <g class="svg-text"> <text x="20" y="030" class="fragment" data-fragment-index="01">💥 commit (c84ef9)</text> <text x="20" y="060" class="fragment" data-fragment-index="06">💥 commit (12e6d8)</text> <text x="20" y="090" class="fragment" data-fragment-index="07">💥 commit (be60d0)</text> <text x="20" y="120" class="fragment" data-fragment-index="08">💥 commit (597dfe)</text> <text x="20" y="150" class="fragment" data-fragment-index="09">💥 commit (f79a85)</text> <text x="20" y="180" class="fragment" data-fragment-index="10">💥 commit (cf9253)</text> </g> <g class="fragment fade-out" data-fragment-index="6"> <g class="fragment" data-fragment-index="2"> <line class="grid x-grid svg-hline" x1="240" x2="270" y1="25" y2="010"></line> <circle class="svg-circle svg-gray" cx="270" cy="010" r="3"></circle> <text class="svg-text svg-small" x="280" y="010">Who comitted?</text> </g> <g class="fragment" data-fragment-index="3"> <line class="grid x-grid svg-hline" x1="240" x2="270" y1="25" y2="30"></line> <circle class="svg-circle svg-gray" cx="270" cy="030" r="3"></circle> <text class="svg-text svg-small" x="280" y="030">When was comitted?</text> </g> <g class="fragment" data-fragment-index="4"> <line class="grid x-grid svg-hline" x1="240" x2="270" y1="25" y2="50"></line> <circle class="svg-circle svg-gray" cx="270" cy="050" r="3"></circle> <text class="svg-text svg-small" x="280" y="050">What changed?</text> </g> <g class="fragment" data-fragment-index="5"> <line class="grid x-grid svg-hline" x1="240" x2="270" y1="25" y2="70"></line> <circle class="svg-circle svg-gray" cx="270" cy="070" r="3"></circle> <text class="svg-text svg-small" x="280" y="070">(Why?)</text> </g> </g>
+</svg>
+</div>
+</div>
+</div>
 </section>
 <section id="exercise-publish-html-with-github" class="slide level2 center">
 <h2>Exercise Publish HTML with GitHub 🛠️</h2>
@@ -836,18 +904,6 @@ Nils Ratnaweera
 <li>We don’t have to append the filename if it’s called <code>index.html</code> → Rename <code>got-2.qmd</code> to <code>index.qmd</code> and re-render</li>
 </ul></li>
 </ul>
-</section></section>
-<section>
-<section id="sec-git-github" class="title-slide slide level1 center" data-number="5">
-<h1><span class="header-section-number">5</span> Versioncontrol with Git and GitHub</h1>
-
-</section>
-<section class="slide level2 center">
-
-<p><a href="Git-GitHub.html">Git and GitHub</a></p>
-</section>
-<section class="slide level2 center">
-
 <div class="quarto-auto-generated-content">
 <p><img src="images/zhaw_sw_neg.png" class="slide-logo"></p>
 <div class="footer footer-default">

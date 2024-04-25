@@ -1,7 +1,7 @@
 ---
-title: "Collaboration, Sharing & Version Control"
+title: "Reproducible and Publicly Visible Data Analysis"
 author: "Nils Ratnaweera"
-date: 22/04/2024
+date: 03/05/2024
 format: 
   revealjs:
     theme: dark
@@ -24,28 +24,61 @@ suppress-bibliography: true # otherwise, a bibliography is appended
 
 ## Goals
 
-::: {.incremental}
-- Know the advantages of *simple text documents    
-- Know the basics of Markdown
-- Know the basics of Quarto
-- Quarto Advanced Features
-- Quarto Professional Features
-- (Collaboration with Git and GitHub)
+:::{.callout-important}
+
+## TODO
+
+Write out these goals
+
 :::
 
 
-# Literate Programming
+
+# [Reproducibility]{.hlo} in Data Science
+
+---
+
+## {data-background-image="images/garret.jpg"}
+
+
+## {data-background-image="images/reproducibility_crisis-2.png" data-background-size="contain"}
+
+---
+
+::: {.r-fit-text .uppercase}
+Lack of [reproducibility]{.hlo}
+:::
+
+::: {.r-fit-text .uppercase}
+is a problem
+:::
+
+---
+
+::: {.r-fit-text .uppercase}
+[Quarto]{.hlo}, [Git]{.hlo} & [GitHub]{.hlo} are
+:::
+
+::: {.r-fit-text .uppercase}
+(part of) the solution
+:::
+
+# Literate Programming with [Quarto]{.hlo}
 
 ## {data-background-image="images/pexels-anete-lusina-7256682.jpg"}
 
-:::{.blockquote .font200}
+:::{.blockquote .font200 .outline}
 When was the last time you spent a pleasant evening in a comfortable chair, reading a good R Script?
 :::
 
-:::{.blockquote .attribution}
+:::{.blockquote .attribution .outline}
 -- Adapted from John Bentley (1986) "Communications of the ACM"
 :::
 
+
+::: {.notes}
+- Why would you even do that? A lot of good R-Scripts are written, only a portion of them are only ever read
+:::
 
 ## Donald Knuth 1984
 
@@ -73,8 +106,6 @@ Literate programming is a programming paradigm introduced in 1984
 
 :::{.fragment .frade-in .fade-out}
 > I’ve stumbled across a method of composing programs that excites me very much.
->
-> In fact, my enthusiasm is so great that I must warn the reader to discount much of what I shall say as the ravings of a fanatic who thinks he has just seen a great light.
 
 :::
 
@@ -103,7 +134,7 @@ Literate programming is a programming paradigm introduced in 1984
 ## {data-background-video="video/knuth.mp4" data-background-size="contain"}
 
 
-## Exercise 🛠️
+## Exercise: Literate Programing 🛠️
 
 *Make your R-Script literate*
 
@@ -111,9 +142,7 @@ Literate programming is a programming paradigm introduced in 1984
 2. Unzip the File in a reasonable location
 3. Open the .RProj File with RStudio
 4. Run the RScript got-1.R and try to undestand what is happening
-5. Make the R-Script literate by 
-
-   > explaining to human beings what we want a computer to do
+5. Make the R-Script literate by *explaining to human beings what we want a computer to do*
 
 
 
@@ -123,40 +152,19 @@ Do this as well via sharing the screen
 
 :::
 
-# Markup and Markdown
+# Markdown
+
+## [Why]{.hlo} Markdown?
 
 :::{.notes}
 - Using RComments to explain your code is great, but very limiting
 - We cannot properly structure our comments: Highlight words, work with images, hyperlinks etc
-- This is where Markup and markdown comes into play
+- This is where markdown comes into play
 :::
-
-## What is a markup language?    
-
-- Language for structuring texts
-- Machine readable (use of tags / symbols)
-- Clear separation of content and formatting
-- *What you see is what you mean* (WYSIWYM)
-
-::: {.notes}
-
-Focus on what we want to write, not what it looks like. 
-
-:::
-
-## Some existing markup languages
-
-Making a text **bold** in HTML, LaTex and Markdown:
-
-| Langauge | Example                |
-|----------|------------------------|
-| HTML     | `<b>Hello World</b>`   |
-| LaTeX    | `\textbf{Hello World}` |
-| Markdown | `**Hello World**`      |
 
 ## What is Markdown?
 
-- Lightweight markup language for easy text formatting
+- A Lightweight markup language
 - Easy to learn 
 - Machine readable *and* human readable
 
@@ -165,7 +173,7 @@ Making a text **bold** in HTML, LaTex and Markdown:
 ```{.markdown}
 # A story of a fox
 
-The *quick* brown fox **jumps** over the lazy [dog](https://en.wikipedia.org/wiki/Dog).
+The *quick* brown fox **jumps** over the lazy dog.
 
 ![](images/fox-over-dog.jpg)
 ```
@@ -174,11 +182,14 @@ The *quick* brown fox **jumps** over the lazy [dog](https://en.wikipedia.org/wik
 
 <div style="height: 100px"></div>
 
+:::{#story-of-a-fox}
 ### A story of a fox
 
-The *quick* brown fox **jumps** over the lazy [dog](https://en.wikipedia.org/wiki/Dog).
+The *quick* brown fox **jumps** over the lazy dog.
 
-![](images/fox-over-dog.jpg){width="400px"}
+![](images/fox-over-dog.jpg){width="240px"}
+
+:::
 
 ::: {.notes}
 - [Markdown Basics](https://quarto.org/docs/authoring/markdown-basics.html)
@@ -187,25 +198,59 @@ The *quick* brown fox **jumps** over the lazy [dog](https://en.wikipedia.org/wik
 :::
 
 
+## Markdown exercise 🛠️
+
+
+:::{.incremental}
+1. Grab your smartphone (if you have one)
+2. Open your favorite messenger: Threema, Telegram or WhatsApp  (not Signal)
+3. Send the following text message to your favorite geek:
+
+:::
+
+::: {.fragment}
+Threema / WhatsApp:
+```{.markdown code-line-numbers="false"}
+Did you know, that Threema and WhatsApp support markdown?
+*Bold*, _italic_ and ~strikethrough~!
+```
+:::
+
+::: {.fragment}
+Telegram:
+
+```{.markdown code-line-numbers="false"}
+Did you know, that Telegram supports markdown?
+**Bold**, *italic* and ~~strikethrough~~.
+```
+:::
+
+
+## If that was Mark[down]{.hlo}, what's Mark[up]{.hlo}?    
+
+- Markup is a generic term for a language which structures text
+- Machine readable (use of tags / symbols)
+- Markdown is *a* markup language
+- Other markup languages include: HTML and LaTeX
+- Making text bold:
+  - Markdown: `**Hello World**`     
+  - HTML: `<b>Hello World</b>`  
+  - LaTeX: `\textbf{Hello World}`
+
+
 # Quarto
 
 ## What is Quarto?
 
 :::{.incremental}
-- An open source *cli* tool
-- Based on Markdown
+- Combines Markdown with R to generate Documents
+- Also works with Python, Julia...
+- Can create PDFs, Websites, Books or Slides of your data analysis
+- Is OpenSource
+- Is used via the commandline / terminal
+- Workflow:
   ![](images/rstudio-qmd-how-it-works2.png)
-- Extends the standard Markdown language with useful elements (e.g. callout blocks)
-- Integrates the integration of code (R, Python, Julia, SQL...)
 :::
-
-## Output formats
-
-- `html`: Books, Slides, Blogs...
-- `pdf`: Books, Slides
-- `epub`: Books
-- `word`: Books
-- `pptx`: Slides
 
 ## Quarto Exercise 1 🛠️
 
@@ -236,13 +281,12 @@ The *quick* brown fox **jumps** over the lazy [dog](https://en.wikipedia.org/wik
 
 :::{.incremental}
 - Iterative development with `render`: 🫤
-- `quarto preview` enables a live preview (UX: 🥰)
+- Iterative development with `preview`: 🥰
 
   ```{.bash}
   # quarto render markdown.md
   quarto preview markdown.md
   ```
-- Try it!
 :::
 
 
@@ -252,7 +296,7 @@ The *quick* brown fox **jumps** over the lazy [dog](https://en.wikipedia.org/wik
 
 - Markdown talks to humans
 - R Code talks to humans & the computer
-- Let's add the R-Code from `got-1.R` with <kbd>Ctrl</kbd>+<kbd>Alt</kbd><kbd>I</kbd>
+- Let's add the R-Code from `got-1.R` with <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>i</kbd>
 - This adds a "fence" where we can add R-Code
 - Add the R-Code from `got-1.R` into the code block
 - Check your updated preview
@@ -266,7 +310,7 @@ The *quick* brown fox **jumps** over the lazy [dog](https://en.wikipedia.org/wik
 - YAML: *YAML Ain't a Markup Language*
 - A machine- and human-readable way of storing structured data
 - An example:  
-  ```yaml
+  ```{.yaml}
   title: Analysis of GOT Series
   author: Nils Ratnaweera
   ```
@@ -277,9 +321,9 @@ The *quick* brown fox **jumps** over the lazy [dog](https://en.wikipedia.org/wik
 
 ## Exercise YAML Header 1 🛠️
 
-- Add metadata to your Markdown file using YAML headers
+- Add metadata to your markdown file using YAML headers
 
-```yaml
+```{.yaml}
 ---
 title: A song of ice and fire
 author: Nils Ratnaweera 
@@ -289,10 +333,11 @@ author: Nils Ratnaweera
 ## Exercise YAML Header 2 🛠️
 
 
-- Add metadata to your Markdown file using YAML headers
-- This renders your file to pdf. You might need to install `tinytext` (see message in terminal)
+- Add metadata to your markdown file using YAML headers
+- This renders your file to pdf
+- You might need to install `tinytext` (see message in terminal)
 
-```{.yaml code-line-numbers="5-9"}
+```{.yaml}
 ---
 title: A song of ice and fire
 author: Nils Ratnaweera 
@@ -335,7 +380,7 @@ format:
 - Click on Publish
 
 
-## Exercise Publish HTML with QuartoPub 🛠️
+## Exercise Publish HTML with QuartoPub 🛠️{data-visibility="hidden"}
 
 
 - Create a new account on [quartopub.com](https://quartopub.com/)
@@ -344,6 +389,129 @@ format:
   ```{.bash}
   quarto publish quarto-pub got-2.qmd
   ```
+
+
+# Versioncontrol with Git and GitHub{#sec-git-github}
+
+## 
+
+![](images/git-for-designers.jpg)
+
+
+## GIT LETS YOU TELL THE STORY OF YOUR PROJECT
+
+---
+
+::: {.font150}
+You use Git to take snapshots of all the files in a folder. 
+
+This folder is called a [repository]{.hlo} or [repo]{.hlo}.
+
+:::
+
+---
+
+::: {.font150}
+
+When you want to take a snapshot of a file or files, you create a [commit]{.hlo}
+:::
+
+---
+
+
+:::::{.r-hstack}
+
+::: {}
+![](images-git-github/phd101212s.gif)
+
+:::
+
+:::: {}
+
+::: {.class}
+
+
+<svg class="graph" style="height: 200px; width: 500px;">
+	<g class="grid x-grid svg-hline">
+	  <line x1="10" x2="10" y1="030" y2="060" class="fragment" data-fragment-index="6"></line>
+	  <line x1="10" x2="10" y1="060" y2="090" class="fragment" data-fragment-index="7"></line>
+	  <line x1="10" x2="10" y1="090" y2="120" class="fragment" data-fragment-index="8"></line>
+	  <line x1="10" x2="10" y1="120" y2="150" class="fragment" data-fragment-index="9"></line>
+	  <line x1="10" x2="10" y1="150" y2="180" class="fragment" data-fragment-index="10"></line>
+	</g>
+	<g class="svg-circle">
+		<circle cx="10" cy="030" r="5" class="fragment" data-fragment-index="1"></circle>
+		<circle cx="10" cy="060" r="5" class="fragment" data-fragment-index="6"></circle>
+		<circle cx="10" cy="090" r="5" class="fragment" data-fragment-index="7"></circle>
+		<circle cx="10" cy="120" r="5" class="fragment" data-fragment-index="8"></circle>
+		<circle cx="10" cy="150" r="5" class="fragment" data-fragment-index="9"></circle>
+		<circle cx="10" cy="180" r="5" class="fragment" data-fragment-index="10"></circle>
+	</g>
+	  <g class="svg-text">
+		<text x="20" y="030" class="fragment" data-fragment-index="1">Final.doc</text>
+		<text x="20" y="060" class="fragment" data-fragment-index="6">Final_rev.2.doc</text>
+		<text x="20" y="090" class="fragment" data-fragment-index="7">FINAL_rev.6.COMMENTS.doc</text>
+		<text x="20" y="120" class="fragment" data-fragment-index="8">FINAL_rev.8.comments6.CORRECTIONS.doc</text>
+		<text x="20" y="150" class="fragment" data-fragment-index="9">FINAL_rev.18.comments7.corrections9.MORE.30.doc</text>
+		<text x="20" y="180" class="fragment" data-fragment-index="10">FINAL_rev.22.comments49.corrections.10.#@$%WHYDIDICOMETOGRADSCHOOL????.doc</text>
+	</g>				  
+</svg>
+:::
+
+::: {}
+<svg class="graph" style="height: 200px; width: 500px;">
+	<g class="grid x-grid svg-hline">
+	  <line x1="10" x2="10" y1="030" y2="060" class="fragment" data-fragment-index="6"></line>
+	  <line x1="10" x2="10" y1="060" y2="090" class="fragment" data-fragment-index="7"></line>
+	  <line x1="10" x2="10" y1="090" y2="120" class="fragment" data-fragment-index="8"></line>
+	  <line x1="10" x2="10" y1="120" y2="150" class="fragment" data-fragment-index="9"></line>
+	  <line x1="10" x2="10" y1="150" y2="180" class="fragment" data-fragment-index="10"></line>
+	</g>
+	<g class="svg-circle">
+		<circle cx="10" cy="030" r="5" class="fragment" data-fragment-index="1"></circle>
+		<circle cx="10" cy="060" r="5" class="fragment" data-fragment-index="6"></circle>
+		<circle cx="10" cy="090" r="5" class="fragment" data-fragment-index="7"></circle>
+		<circle cx="10" cy="120" r="5" class="fragment" data-fragment-index="8"></circle>
+		<circle cx="10" cy="150" r="5" class="fragment" data-fragment-index="9"></circle>
+		<circle cx="10" cy="180" r="5" class="fragment" data-fragment-index="10"></circle>
+	</g>
+	  <g class="svg-text">
+		<text x="20" y="030" class="fragment" data-fragment-index="01">💥 commit (c84ef9)</text>
+		<text x="20" y="060" class="fragment" data-fragment-index="06">💥 commit (12e6d8)</text>
+		<text x="20" y="090" class="fragment" data-fragment-index="07">💥 commit (be60d0)</text>
+		<text x="20" y="120" class="fragment" data-fragment-index="08">💥 commit (597dfe)</text>
+		<text x="20" y="150" class="fragment" data-fragment-index="09">💥 commit (f79a85)</text>
+		<text x="20" y="180" class="fragment" data-fragment-index="10">💥 commit (cf9253)</text>
+	</g>
+  <g class="fragment fade-out" data-fragment-index="6">
+    <g class="fragment" data-fragment-index="2">
+      <line class="grid x-grid svg-hline" x1="240" x2="270" y1="25" y2="010"></line>
+      <circle class="svg-circle svg-gray" cx="270" cy="010" r="3"></circle>
+      <text class="svg-text svg-small" x="280" y="010">Who comitted?</text>
+    </g>
+    <g class="fragment"  data-fragment-index="3">
+      <line class="grid x-grid svg-hline" x1="240" x2="270" y1="25" y2="30"></line>
+      <circle class="svg-circle svg-gray" cx="270" cy="030" r="3"></circle>
+      <text class="svg-text svg-small" x="280" y="030">When was comitted?</text>
+    </g>
+    <g class="fragment"  data-fragment-index="4">
+      <line class="grid x-grid svg-hline" x1="240" x2="270" y1="25" y2="50"></line>
+      <circle class="svg-circle svg-gray" cx="270" cy="050" r="3"></circle>
+      <text class="svg-text svg-small" x="280" y="050">What changed?</text>
+    </g>
+      <g class="fragment"  data-fragment-index="5">
+      <line class="grid x-grid svg-hline" x1="240" x2="270" y1="25" y2="70"></line>
+      <circle class="svg-circle svg-gray" cx="270" cy="070" r="3"></circle>
+      <text class="svg-text svg-small" x="280" y="070">(Why?)</text>
+    </g> 
+  </g>
+</svg>
+:::
+
+
+::::
+:::::
+---
 
 
 
@@ -377,13 +545,7 @@ format:
   - The URL is incomplete: we have to append `got-2.html`
   - We don't have to append the filename if it's called `index.html` → Rename `got-2.qmd` to `index.qmd` and re-render
 
-# Versioncontrol with Git and GitHub{#sec-git-github}
-
----
-
-[Git and GitHub](Git-GitHub.html)
 
 
----
 
 
