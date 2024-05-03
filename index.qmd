@@ -22,15 +22,16 @@ suppress-bibliography: true # otherwise, a bibliography is appended
 # Today{.unnumbered .unlisted}
 
 
-## Goals
+## Timeline
 
-:::{.callout-important}
+|               |               |
+| ------------- | ------------- |
+| 08:00 - 08:45 | *1 Reproducibility* - *3 Markdown*  |
+| 08:50 - 09:35 | *4 Quarto* - *5 Publishing HTML / Websites*  |
+| 09:50 - 10:35 | *6 Versioncontrol with Git / GitHub*  |
+| 10:50 - 11:15 | *6 Versioncontrol with Git / GitHub*  |
+| 11:15 - 11:45 | *Open Licensing*  |
 
-## TODO
-
-Write out these goals
-
-:::
 
 
 
@@ -63,7 +64,7 @@ is a problem
 (part of) the solution
 :::
 
-# Literate Programming with [Quarto]{.hlo}
+# Literate Programming and [Quarto]{.hlo}
 
 ## {data-background-image="images/pexels-anete-lusina-7256682.jpg"}
 
@@ -211,7 +212,7 @@ The *quick* brown fox **jumps** over the lazy dog.
 ::: {.fragment}
 Threema / WhatsApp:
 ```{.markdown code-line-numbers="false"}
-Did you know, that Threema and WhatsApp support markdown?
+Did you know? Threema and WhatsApp support markdown formtting.
 *Bold*, _italic_ and ~strikethrough~!
 ```
 :::
@@ -220,22 +221,39 @@ Did you know, that Threema and WhatsApp support markdown?
 Telegram:
 
 ```{.markdown code-line-numbers="false"}
-Did you know, that Telegram supports markdown?
+Did you know? Telegram supports markdown formatting.
 **Bold**, *italic* and ~~strikethrough~~.
 ```
 :::
 
 
+## {background-video="video/threema_low2.mp4" background-size="contain"}
+
+
+##
+
+:::{.r-hstack .justify-between} 
+
+![](video/formatting.png){width="60%"}
+
+![](video/formatted.png){width="60%"}
+
+
+:::
+
+
 ## If that was Mark[down]{.hlo}, what's Mark[up]{.hlo}?    
 
-- Markup is a generic term for a language which structures text
-- Machine readable (use of tags / symbols)
+::: {.incremental}
+- Markup is a generic term for a language which structures text in a machine readable way (use of tags / symbols)
 - Markdown is *a* markup language
 - Other markup languages include: HTML and LaTeX
 - Making text bold:
   - Markdown: `**Hello World**`     
   - HTML: `<b>Hello World</b>`  
   - LaTeX: `\textbf{Hello World}`
+
+:::
 
 
 # Quarto
@@ -516,7 +534,7 @@ When you want to take a snapshot of a file or files, you create a [commit]{.hlo}
 
 
 
-## Exercise Publish HTML with GitHub 🛠️
+## Exercise Publish HTML with GitHub 🛠️ {visibility="hidden"}
 
 - Create a GitHub Account (➲ [github.com](https://github.com/))
 - Create a new Repo (`+` → *new repository*)
@@ -524,7 +542,7 @@ When you want to take a snapshot of a file or files, you create a [commit]{.hlo}
   - Set visibility to public
   - Click on *Create repository*
 
-## Exercise Publish HTML with GitHub 🛠️
+## Exercise Publish HTML with GitHub 🛠️ {visibility="hidden"}
 
 
 - Upload Files:
@@ -538,7 +556,7 @@ When you want to take a snapshot of a file or files, you create a [commit]{.hlo}
   - Click *Save changes*
 - Go to the *Actions* Tab and wait for the worflows to complete
 
-## Exercise Publish HTML with GitHub 🛠️
+## Exercise Publish HTML with GitHub 🛠️ {visibility="hidden"}
 
 
 - Got back to the *Codes* Tab and Click on the URL
