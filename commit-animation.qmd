@@ -1,0 +1,92 @@
+:::::{.r-hstack}
+
+::: {}
+![](images-git-github/phd101212s.gif)
+
+:::
+
+:::: {}
+
+::: {}
+
+
+<svg class="graph" style="height: 200px; width: 500px;">
+	<g class="grid x-grid svg-hline">
+	  <line x1="10" x2="10" y1="030" y2="060" class="fragment" data-fragment-index="6"></line>
+	  <line x1="10" x2="10" y1="060" y2="090" class="fragment" data-fragment-index="7"></line>
+	  <line x1="10" x2="10" y1="090" y2="120" class="fragment" data-fragment-index="8"></line>
+	  <line x1="10" x2="10" y1="120" y2="150" class="fragment" data-fragment-index="9"></line>
+	  <line x1="10" x2="10" y1="150" y2="180" class="fragment" data-fragment-index="10"></line>
+	</g>
+	<g class="svg-circle">
+		<circle cx="10" cy="030" r="5" class="fragment" data-fragment-index="1"></circle>
+		<circle cx="10" cy="060" r="5" class="fragment" data-fragment-index="6"></circle>
+		<circle cx="10" cy="090" r="5" class="fragment" data-fragment-index="7"></circle>
+		<circle cx="10" cy="120" r="5" class="fragment" data-fragment-index="8"></circle>
+		<circle cx="10" cy="150" r="5" class="fragment" data-fragment-index="9"></circle>
+		<circle cx="10" cy="180" r="5" class="fragment" data-fragment-index="10"></circle>
+	</g>
+	  <g class="svg-text">
+		<text x="20" y="030" class="fragment" data-fragment-index="1">Final.doc</text>
+		<text x="20" y="060" class="fragment" data-fragment-index="6">Final_rev.2.doc</text>
+		<text x="20" y="090" class="fragment" data-fragment-index="7">FINAL_rev.6.COMMENTS.doc</text>
+		<text x="20" y="120" class="fragment" data-fragment-index="8">FINAL_rev.8.comments6.CORRECTIONS.doc</text>
+		<text x="20" y="150" class="fragment" data-fragment-index="9">FINAL_rev.18.comments7.corrections9.MORE.30.doc</text>
+		<text x="20" y="180" class="fragment" data-fragment-index="10">FINAL_rev.22.comments49.corrections.10.#@$%WHYDIDICOMETOGRADSCHOOL????.doc</text>
+	</g>				  
+</svg>
+:::
+
+::: {}
+<svg class="graph" style="height: 200px; width: 500px;">
+	<g class="grid x-grid svg-hline">
+	  <line x1="10" x2="10" y1="030" y2="060" class="fragment" data-fragment-index="6"></line>
+	  <line x1="10" x2="10" y1="060" y2="090" class="fragment" data-fragment-index="7"></line>
+	  <line x1="10" x2="10" y1="090" y2="120" class="fragment" data-fragment-index="8"></line>
+	  <line x1="10" x2="10" y1="120" y2="150" class="fragment" data-fragment-index="9"></line>
+	  <line x1="10" x2="10" y1="150" y2="180" class="fragment" data-fragment-index="10"></line>
+	</g>
+	<g class="svg-circle">
+		<circle cx="10" cy="030" r="5" class="fragment" data-fragment-index="1"></circle>
+		<circle cx="10" cy="060" r="5" class="fragment" data-fragment-index="6"></circle>
+		<circle cx="10" cy="090" r="5" class="fragment" data-fragment-index="7"></circle>
+		<circle cx="10" cy="120" r="5" class="fragment" data-fragment-index="8"></circle>
+		<circle cx="10" cy="150" r="5" class="fragment" data-fragment-index="9"></circle>
+		<circle cx="10" cy="180" r="5" class="fragment" data-fragment-index="10"></circle>
+	</g>
+	  <g class="svg-text">
+		<text x="20" y="030" class="fragment" data-fragment-index="01">💥 commit (c84ef9)</text>
+		<text x="20" y="060" class="fragment" data-fragment-index="06">💥 commit (12e6d8)</text>
+		<text x="20" y="090" class="fragment" data-fragment-index="07">💥 commit (be60d0)</text>
+		<text x="20" y="120" class="fragment" data-fragment-index="08">💥 commit (597dfe)</text>
+		<text x="20" y="150" class="fragment" data-fragment-index="09">💥 commit (f79a85)</text>
+		<text x="20" y="180" class="fragment" data-fragment-index="10">💥 commit (cf9253)</text>
+	</g>
+  <g class="fragment fade-out" data-fragment-index="6">
+    <g class="fragment" data-fragment-index="2">
+      <line class="grid x-grid svg-hline" x1="240" x2="270" y1="25" y2="010"></line>
+      <circle class="svg-circle svg-gray" cx="270" cy="010" r="3"></circle>
+      <text class="svg-text svg-small" x="280" y="010">Who comitted?</text>
+    </g>
+    <g class="fragment"  data-fragment-index="3">
+      <line class="grid x-grid svg-hline" x1="240" x2="270" y1="25" y2="30"></line>
+      <circle class="svg-circle svg-gray" cx="270" cy="030" r="3"></circle>
+      <text class="svg-text svg-small" x="280" y="030">When was comitted?</text>
+    </g>
+    <g class="fragment"  data-fragment-index="4">
+      <line class="grid x-grid svg-hline" x1="240" x2="270" y1="25" y2="50"></line>
+      <circle class="svg-circle svg-gray" cx="270" cy="050" r="3"></circle>
+      <text class="svg-text svg-small" x="280" y="050">What changed?</text>
+    </g>
+      <g class="fragment"  data-fragment-index="5">
+      <line class="grid x-grid svg-hline" x1="240" x2="270" y1="25" y2="70"></line>
+      <circle class="svg-circle svg-gray" cx="270" cy="070" r="3"></circle>
+      <text class="svg-text svg-small" x="280" y="070">(Why?)</text>
+    </g> 
+  </g>
+</svg>
+:::
+
+
+::::
+:::::

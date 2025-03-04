@@ -22,17 +22,18 @@ suppress-bibliography: true # otherwise, a bibliography is appended
 # Today{.unnumbered .unlisted}
 
 
+<!--
 ## Timeline
 
-|               |               |
-| ------------- | ------------- |
-| 08:00 - 08:45 | *1 Reproducibility* - *3 Markdown*  |
-| 08:50 - 09:35 | *4 Quarto* - *5 Publishing HTML / Websites*  |
-| 09:50 - 10:35 | *6 Versioncontrol with Git / GitHub*  |
-| 10:50 - 11:15 | *6 Versioncontrol with Git / GitHub*  |
-| 11:15 - 11:45 | *Open Licensing*  |
+|               |                                              |
+| ------------- | -------------------------------------------- |
+| 08:00 - 08:45 | *1 Reproducibility* - *3 Markdown*           |
+| 08:50 - 09:35 | *4 Quarto* - *5 Publishing HTML / Websites* |
+| 09:50 - 10:35 | *6 Versioncontrol with Git / GitHub*         |
+| 10:50 - 11:15 | *6 Versioncontrol with Git / GitHub*         |
+| 11:45 - 12:00 | *Project work*                               |
 
-
+-->
 
 
 # [Reproducibility]{.hlo} in Data Science
@@ -42,7 +43,29 @@ suppress-bibliography: true # otherwise, a bibliography is appended
 ## {data-background-image="images/garret.jpg"}
 
 
+:::{.blockquote .font200 .outline .fragment}
+I believe history will see RMarkdown as a turning point in the replication crisis.
+:::
+
+:::{.notes}
+
+You all saw the video of Garret Grolemund for the RStudio conference 2019.
+
+Note that Quarto, which we will discuss today, is the successor of RMarkdown.
+
+:::
+
+
 ## {data-background-image="images/reproducibility_crisis-2.png" data-background-size="contain"}
+
+:::{.notes}
+
+It is estimated that 75 - 90% of preclinical results cannot be reproduced.
+
+Other fields of science probabbly are even worse off.
+
+:::
+
 
 ---
 
@@ -66,6 +89,11 @@ is a problem
 
 # Literate Programming and [Quarto]{.hlo}
 
+
+:::{.notes}
+Let's start with *literate programming*, which is a term coined by Donald Knuth 1984. J. Bentley phrases it like so:
+:::
+
 ## {data-background-image="images/pexels-anete-lusina-7256682.jpg"}
 
 :::{.blockquote .font200 .outline}
@@ -76,9 +104,14 @@ When was the last time you spent a pleasant evening in a comfortable chair, read
 -- Adapted from John Bentley (1986) "Communications of the ACM"
 :::
 
+:::{.class}
+content
+:::
 
 ::: {.notes}
-- Why would you even do that? A lot of good R-Scripts are written, only a portion of them are only ever read
+- Why would you even do that? 
+- A lot of good R-Scripts are written, only a small portion of them are only ever read. Why?
+- As mentioned, Donald Knuth "invented" this paradigm 1984.
 :::
 
 ## Donald Knuth 1984
@@ -126,6 +159,7 @@ Literate programming is a programming paradigm introduced in 1984
 
 :::{.notes}
 
+
 - Donald Knuth invented this method for Programs. But we can replace the word "program" with R Script. 
 - Check if the sound works (next up: video)
 
@@ -139,7 +173,7 @@ Literate programming is a programming paradigm introduced in 1984
 
 *Make your R-Script literate*
 
-1. Download the File `GOT.zip` from moodle (*Game of Thrones Dataset*)
+1. Download the Folder `GOT.zip` from moodle (*Game of Thrones Dataset*)
 2. Unzip the File in a reasonable location
 3. Open the .RProj File with RStudio
 4. Run the RScript got-1.R and try to undestand what is happening
@@ -188,7 +222,7 @@ The *quick* brown fox **jumps** over the lazy dog.
 
 The *quick* brown fox **jumps** over the lazy dog.
 
-![](images/fox-over-dog.jpg){width="240px"}
+![](images/fox-over-dog2.jpg){width="240px"}
 
 :::
 
@@ -212,7 +246,7 @@ The *quick* brown fox **jumps** over the lazy dog.
 ::: {.fragment}
 Threema / WhatsApp:
 ```{.markdown code-line-numbers="false"}
-Did you know? Threema and WhatsApp support markdown formtting.
+Did you know? Threema and WhatsApp support markdown formatting.
 *Bold*, _italic_ and ~strikethrough~!
 ```
 :::
@@ -227,7 +261,7 @@ Did you know? Telegram supports markdown formatting.
 :::
 
 
-## {background-video="video/threema_low2.mp4" background-size="contain"}
+## {background-video="video/threema_low2.mp4" background-size="contain" visibility="hidden"}
 
 
 ##
@@ -239,6 +273,12 @@ Did you know? Telegram supports markdown formatting.
 ![](video/formatted.png){width="60%"}
 
 
+:::{.notes}
+- On the left side, our "Markdown Editor" previews our markdown syntax while typing. 
+- However, event without this preview the markdown text is human readable
+- On the right side, we see a *rendered* version of our text.
+:::
+
 :::
 
 
@@ -248,11 +288,15 @@ Did you know? Telegram supports markdown formatting.
 - Markup is a generic term for a language which structures text in a machine readable way (use of tags / symbols)
 - Markdown is *a* markup language
 - Other markup languages include: HTML and LaTeX
-- Making text bold:
+- Here is an example of making **bold** text
   - Markdown: `**Hello World**`     
   - HTML: `<b>Hello World</b>`  
   - LaTeX: `\textbf{Hello World}`
 
+:::
+
+:::{.notes}
+As seen in the comparison, Markdown is *Human readable!*
 :::
 
 
@@ -284,15 +328,22 @@ Did you know? Telegram supports markdown formatting.
 ## Quarto Exercise 2 🛠️
 
 
-1. Create a new text file (*File* → *New File* → *Text File*)
+1. Create a new Quarto file
+   - Remove the checkbox *Use visual markdown editor*
+   - Click on *Create empty document*
 2. Save as `got-2.qmd`
-3. Write some prose on the analysis done in `got1-R`
+3. Write some prose on the analysis done in `got-1.R` (no R code yet)
 4. Render the file to html by running the following code *in your terminal*
 
    ```{.bash}
    quarto render got-2.qmd
    ```
 
+:::{.notes}
+- To highlight that we are really just working with textfiles, dont create a quarto file yet
+- Don't add any R Code yet!
+- You could also use RMarkdown, but we recommend quarto
+:::
 
 
 ## Quarto Exercise 3 🛠️
@@ -337,29 +388,30 @@ Did you know? Telegram supports markdown formatting.
 :::
 
 
-## Exercise YAML Header 1 🛠️
+## YAML Header Exercise 1 🛠️
 
 - Add metadata to your markdown file using YAML headers
+- Regard the output (`quarto preview`)
 
 ```{.yaml}
 ---
-title: A song of ice and fire
-author: Nils Ratnaweera 
+title: Analysis of GOT Series
+author: Your Name
 ---
 ```
 
-## Exercise YAML Header 2 🛠️
+## YAML Header Exercise 2 🛠️
 
 
-- Add metadata to your markdown file using YAML headers
+- Add a format specification to your YAML header: Either `typst` (recommended) or `pdf`
 - This renders your file to pdf
-- You might need to install `tinytext` (see message in terminal)
+- If you use `pdf`, you might need to install `tinytext` (see message in terminal)
 
 ```{.yaml}
 ---
-title: A song of ice and fire
+title: Analysis of GOT Series
 author: Nils Ratnaweera 
-format: pdf
+format: typst
 ---
 ```
 
@@ -409,6 +461,116 @@ format:
   ```
 
 
+# Quarto Advanced
+
+
+
+## Quarto Advanced Exercise 1 🛠️
+
+- Insert one of the images included in your folder into your document
+- ([quarto.org](https://quarto.org/docs/authoring/figures.html) → Guide → Authoring → Figures)
+
+## Quarto Advanced Exercise 2 🛠️
+
+- Insert an cross-reference to this image. E.G: *see @fig-baratheon-0*
+- ([quarto.org](https://quarto.org/docs/authoring/cross-references.html) → Guide → Authoring → Scholarly Writing → Cross-References)
+
+
+:::{}
+![The coat of arms of House Baratheon from *A Song of Ice and Fire*](images/baratheon.png){#fig-baratheon-0 width="100px"}
+:::
+
+
+:::{.notes}
+- For a cross-reference, the element to which you want to refer needs an ID
+- This is set in {} and begins with #, for images # is followed by a fig. e.g:
+
+  `![The coat of arms of the House of Baratheon...](images/baratheon.png){#fig-baratheon}`
+
+- To refer to the image, use `@fig-baratheon`
+::: 
+
+
+## Quarto Advanced Exercise 3 🛠️ {#sec-uebung-quarto-featuers-2}
+
+- Insert a crossreference to a chapter eg *see @sec-uebung-quarto-featuers-2*
+- ([quarto.org](https://quarto.org/docs/authoring/cross-references.html) → Guide → Authoring → Scholarly Writing → Cross-References)
+
+
+:::{.notes}
+
+- Chapter references get a `{#sec-}`
+- Chapters are (currently) only referenced with *numbers*
+  - in the YAML header set: `number-sections: true`
+  - See this open issue <https://github.com/quarto-dev/quarto-cli/issues/1196>
+
+:::
+
+## Quarto Advanced Exercise 4 🛠
+
+- In Quarto, *figures* can consist of *subfigures*
+- See: [quarto.org](https://quarto.org/docs/authoring/figures.html#subfigures) → Guide → Authoring → Figures → Subfigures
+- Creates a subfigure layout similar to the following:
+
+:::{#fig-houses layout-nrow="1"}
+
+![House Baratheon](images/baratheon.png){#fig-barathon}
+
+![House Baylish](images/baylish.png){#fig-baylish}
+
+![House Arryn](images/arryn.png){#fig-arryn}
+
+![House Bolton](images/bolton.png){#fig-bolton}
+
+
+A collection of different coats of arms from the book ‘*A song of Ice and Fire*’, created by *dezzzart* published on [deviantart.com](https://www.deviantart.com/dezzzart)
+:::
+
+
+## Quarto Advanced Exercise 5 🛠
+
+- Add a caption and a cross reference to your `ggplot`-figure
+
+
+## Quarto Advanced Exercise 6 🛠
+
+- Display a table with the top 10 characters in regard to screentime, displaying only the columns `name`, `screentime` and `episodes`.
+- Reference this table in your text
+- Add a caption to your table
+- [quarto.org](https://quarto.org/docs/authoring/tables.html#cross-references) → Guide → Authoring → Tables → Cross References
+- Hint: use `knitr::kable()`
+
+
+## Quarto Advanced Exercise 7 🛠
+
+- Add a (dummy) abstract
+- Make sure this abstract is not numbered and not in the TOC
+- [quarto.org](https://quarto.org/docs/output-formats/html-basics.html#table-of-contents) → Guide → Documents → HTML → HTML Basics
+
+## Quarto Advanced Exercise 8 🛠
+
+Let's add a citation!
+
+1. Got to [scholar.google.com](https://scholar.google.com/) 
+2. Get the bibtex entry of a scientific paper
+3. Create a new text file named `bibliography.bib`
+4. Add the bibtex entry to this file
+5. Include the file in the YAML header: `bibliography: bibliography.bib`
+7. Now you can reference this entry using:
+   - `@knuth1984` for *@knuth1984*
+   - `see [@knuth1984]` for *see [@knuth1984]*
+
+---  
+
+- For more information see [quarto.org](https://quarto.org/docs/authoring/citations.html) → Guide → Authoring → Scholarly Writing → Citations
+- To include Zotero, see [quarto.org](https://quarto.org/docs/visual-editor/technical.html#citations-from-zotero) → Guide → Tools → RStudio IDE → Visual Editor → Technical Writing → Citations → Citations from Zotero
+
+:::{.notes}
+
+
+content
+:::
+
 # Versioncontrol with Git and GitHub{#sec-git-github}
 
 ## 
@@ -437,104 +599,20 @@ When you want to take a snapshot of a file or files, you create a [commit]{.hlo}
 ---
 
 
-:::::{.r-hstack}
-
-::: {}
-![](images-git-github/phd101212s.gif)
-
-:::
-
-:::: {}
-
-::: {.class}
+{{< include commit-animation.qmd >}}
 
 
-<svg class="graph" style="height: 200px; width: 500px;">
-	<g class="grid x-grid svg-hline">
-	  <line x1="10" x2="10" y1="030" y2="060" class="fragment" data-fragment-index="6"></line>
-	  <line x1="10" x2="10" y1="060" y2="090" class="fragment" data-fragment-index="7"></line>
-	  <line x1="10" x2="10" y1="090" y2="120" class="fragment" data-fragment-index="8"></line>
-	  <line x1="10" x2="10" y1="120" y2="150" class="fragment" data-fragment-index="9"></line>
-	  <line x1="10" x2="10" y1="150" y2="180" class="fragment" data-fragment-index="10"></line>
-	</g>
-	<g class="svg-circle">
-		<circle cx="10" cy="030" r="5" class="fragment" data-fragment-index="1"></circle>
-		<circle cx="10" cy="060" r="5" class="fragment" data-fragment-index="6"></circle>
-		<circle cx="10" cy="090" r="5" class="fragment" data-fragment-index="7"></circle>
-		<circle cx="10" cy="120" r="5" class="fragment" data-fragment-index="8"></circle>
-		<circle cx="10" cy="150" r="5" class="fragment" data-fragment-index="9"></circle>
-		<circle cx="10" cy="180" r="5" class="fragment" data-fragment-index="10"></circle>
-	</g>
-	  <g class="svg-text">
-		<text x="20" y="030" class="fragment" data-fragment-index="1">Final.doc</text>
-		<text x="20" y="060" class="fragment" data-fragment-index="6">Final_rev.2.doc</text>
-		<text x="20" y="090" class="fragment" data-fragment-index="7">FINAL_rev.6.COMMENTS.doc</text>
-		<text x="20" y="120" class="fragment" data-fragment-index="8">FINAL_rev.8.comments6.CORRECTIONS.doc</text>
-		<text x="20" y="150" class="fragment" data-fragment-index="9">FINAL_rev.18.comments7.corrections9.MORE.30.doc</text>
-		<text x="20" y="180" class="fragment" data-fragment-index="10">FINAL_rev.22.comments49.corrections.10.#@$%WHYDIDICOMETOGRADSCHOOL????.doc</text>
-	</g>				  
-</svg>
-:::
+## Convinced?
 
-::: {}
-<svg class="graph" style="height: 200px; width: 500px;">
-	<g class="grid x-grid svg-hline">
-	  <line x1="10" x2="10" y1="030" y2="060" class="fragment" data-fragment-index="6"></line>
-	  <line x1="10" x2="10" y1="060" y2="090" class="fragment" data-fragment-index="7"></line>
-	  <line x1="10" x2="10" y1="090" y2="120" class="fragment" data-fragment-index="8"></line>
-	  <line x1="10" x2="10" y1="120" y2="150" class="fragment" data-fragment-index="9"></line>
-	  <line x1="10" x2="10" y1="150" y2="180" class="fragment" data-fragment-index="10"></line>
-	</g>
-	<g class="svg-circle">
-		<circle cx="10" cy="030" r="5" class="fragment" data-fragment-index="1"></circle>
-		<circle cx="10" cy="060" r="5" class="fragment" data-fragment-index="6"></circle>
-		<circle cx="10" cy="090" r="5" class="fragment" data-fragment-index="7"></circle>
-		<circle cx="10" cy="120" r="5" class="fragment" data-fragment-index="8"></circle>
-		<circle cx="10" cy="150" r="5" class="fragment" data-fragment-index="9"></circle>
-		<circle cx="10" cy="180" r="5" class="fragment" data-fragment-index="10"></circle>
-	</g>
-	  <g class="svg-text">
-		<text x="20" y="030" class="fragment" data-fragment-index="01">💥 commit (c84ef9)</text>
-		<text x="20" y="060" class="fragment" data-fragment-index="06">💥 commit (12e6d8)</text>
-		<text x="20" y="090" class="fragment" data-fragment-index="07">💥 commit (be60d0)</text>
-		<text x="20" y="120" class="fragment" data-fragment-index="08">💥 commit (597dfe)</text>
-		<text x="20" y="150" class="fragment" data-fragment-index="09">💥 commit (f79a85)</text>
-		<text x="20" y="180" class="fragment" data-fragment-index="10">💥 commit (cf9253)</text>
-	</g>
-  <g class="fragment fade-out" data-fragment-index="6">
-    <g class="fragment" data-fragment-index="2">
-      <line class="grid x-grid svg-hline" x1="240" x2="270" y1="25" y2="010"></line>
-      <circle class="svg-circle svg-gray" cx="270" cy="010" r="3"></circle>
-      <text class="svg-text svg-small" x="280" y="010">Who comitted?</text>
-    </g>
-    <g class="fragment"  data-fragment-index="3">
-      <line class="grid x-grid svg-hline" x1="240" x2="270" y1="25" y2="30"></line>
-      <circle class="svg-circle svg-gray" cx="270" cy="030" r="3"></circle>
-      <text class="svg-text svg-small" x="280" y="030">When was comitted?</text>
-    </g>
-    <g class="fragment"  data-fragment-index="4">
-      <line class="grid x-grid svg-hline" x1="240" x2="270" y1="25" y2="50"></line>
-      <circle class="svg-circle svg-gray" cx="270" cy="050" r="3"></circle>
-      <text class="svg-text svg-small" x="280" y="050">What changed?</text>
-    </g>
-      <g class="fragment"  data-fragment-index="5">
-      <line class="grid x-grid svg-hline" x1="240" x2="270" y1="25" y2="70"></line>
-      <circle class="svg-circle svg-gray" cx="270" cy="070" r="3"></circle>
-      <text class="svg-text svg-small" x="280" y="070">(Why?)</text>
-    </g> 
-  </g>
-</svg>
-:::
+Want to learn Git?
 
+→ Do the optional exercises on [computationalmovementanalysis.github.io](https://computationalmovementanalysis.github.io/) 
 
-::::
-:::::
----
+(*Week 3 → Exercise A* and *Exercise B*)
 
+<!-- 2025: Continue here: Add exercises to publish to github without git -->
 
-
-
-## Exercise Publish HTML with GitHub 🛠️ {visibility="hidden"}
+## Exercise Publish HTML with GitHub 🛠 {visibility="hidden"}
 
 - Create a GitHub Account (➲ [github.com](https://github.com/))
 - Create a new Repo (`+` → *new repository*)
@@ -542,7 +620,7 @@ When you want to take a snapshot of a file or files, you create a [commit]{.hlo}
   - Set visibility to public
   - Click on *Create repository*
 
-## Exercise Publish HTML with GitHub 🛠️ {visibility="hidden"}
+## Exercise Publish HTML with GitHub 🛠 {visibility="hidden"}
 
 
 - Upload Files:
