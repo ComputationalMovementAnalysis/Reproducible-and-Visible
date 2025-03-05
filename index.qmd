@@ -427,40 +427,6 @@ format:
 ---
 ```
 
-
-# Publishing HTML / Websites
-
-## Publishing HTML Files
-
-:::{.incremental}
-- HTML can be shared publicly by creating a website
-- Some options:
-  - RPubs
-  - QuartoPub
-  - GitHub Pages
-  - Netlify
-
-:::
-
-## Exercise Publish HTML with RPubs 🛠️
-
-- Create a new account on [rpubs.com](https://rpubs.com/)
-- Click on the Blue Publish Button on the Top right of your script
-- Choose *RPubs*
-- Click on Publish
-
-
-## Exercise Publish HTML with QuartoPub 🛠️{data-visibility="hidden"}
-
-
-- Create a new account on [quartopub.com](https://quartopub.com/)
-- Run the following command in your terminal:
-
-  ```{.bash}
-  quarto publish quarto-pub got-2.qmd
-  ```
-
-
 # Quarto Advanced
 
 
@@ -570,6 +536,41 @@ Let's add a citation!
 
 content
 :::
+
+
+# Publishing HTML / Websites
+
+## Publishing HTML Files
+
+:::{.incremental}
+- HTML can be shared publicly by creating a website
+- Some options:
+  - RPubs
+  - QuartoPub
+  - GitHub Pages
+  - Netlify
+
+:::
+
+## Exercise Publish HTML with RPubs 🛠️
+
+- Create a new account on [rpubs.com](https://rpubs.com/)
+- Click on the Blue Publish Button on the Top right of your script
+- Choose *RPubs*
+- Click on Publish
+
+
+## Exercise Publish HTML with QuartoPub 🛠️{data-visibility="hidden"}
+
+
+- Create a new account on [quartopub.com](https://quartopub.com/)
+- Run the following command in your terminal:
+
+  ```{.bash}
+  quarto publish quarto-pub got-2.qmd
+  ```
+
+
 
 # Versioncontrol with Git and GitHub{#sec-git-github}
 
